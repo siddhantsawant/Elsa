@@ -47,19 +47,19 @@ async def on_ready():
     
        
 
-#@bot.event
-#async def on_message(message):
-#    if message.author.id == "269678631050018826" :   #myid
-#        for x in "baka":
-#            await bot.add_reaction(message , ":regional_indicator_"+x+":")     
-#            await asyncio.sleep(0.5)
-#    await bot.process_commands(message)      
-#    else :
-#        await bot.process_commands(message)    
-#    if message.author.bot :
-#        return
-#    else:
-#        await bot.process_commands(message)  
+
+
+
+
+
+
+       
+
+   
+
+
+
+
 
 
 
@@ -70,7 +70,7 @@ async def on_message(msg : str):
         return
 #    elif "elsa" in msg.content.lower():        
 #        await bot.send_message(msg.channel , "**Nikhil is Baka**")
-#        await bot.process_commands(msg)     
+#        await bot.process_commands(msg)    
     else:
         await bot.process_commands(msg)     
 
@@ -145,7 +145,7 @@ async def on_message(ctx) :
 
 
 
-######### TOKEN
+
 
 
 ############     BOT RUN    ################
