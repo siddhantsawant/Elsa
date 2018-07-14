@@ -88,29 +88,7 @@ class Fun:
         await self.bot.delete_message(ctx.message)
 
 
-
-
-#    @commands.command(pass_context = True)
-#    async def xkcd(self, ctx,  no : int = None):
-#        """xkcd"""
-#        if no is None :
-#            no = random.randint(1, 100)
-#            await self.bot.say('https://xkcd.com/{}/'.format(no))       
-#        else:
-#            no = int(no)
-#            if no > 1973:
-#                await self.bot.say('Please enter a number between 1 and 1973 ')
- #           else:
-#                await self.bot.say('https://xkcd.com/{}/'.format(no))     
-
  
- 
-
- 
-
- 
-            
-   
     @commands.command(aliases = ["8ball"])
     async def ball(self,* , message = None):
         """The 8ball"""
@@ -154,19 +132,6 @@ class Fun:
             await self.bot.say(embed=embed)
    
               
-        
-
-
-        
-#    @commands.command(pass_context=True)
-#    async def bot(self,ctx, * , message= None):
-#        """Gives nature of user"""
-#        if self.bot.process_commands("e!bot") == True:
-#            return                
-#        await self.bot.say(ctx.message.author.bot)
-               
-     
-
 
     @commands.command()
     async def big(self  , emo):
@@ -191,18 +156,6 @@ class Fun:
         
 
       
-
-        
-        
-    
-####Add spam command
- 
-
-
-
-
-
-
 
 
 
