@@ -24,12 +24,10 @@ bot = commands.Bot(description=" The Snow Queen ❄️" , command_prefix=("e!","
 
 @bot.event
 async def on_ready():
-    bot.load_extension("repl")   ##Imports repl.py
-    bot.load_extension("Moderation")
-    bot.load_extension("Fun")
-    #bot.load_extension("Math")
-    bot.load_extension("General")  #instead of Info
-    bot.load_extension("API")
+    files = ['repl','Moderation','Fun','Math','General','API']
+    for i in files:
+        bot.load_extension(i)
+
     await bot.change_presence(game= discord.Game(name="with Snow | e!help or E!help",type=0))
     print("---------------------------------")
     print("Logged in as " + bot.user.name)
