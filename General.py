@@ -48,7 +48,6 @@ class General:
             embed.add_field(name="ID", value=user.id, inline=True)
             embed.add_field(name="Bot", value=user.bot ,inline=True)
             embed.add_field(name="Status", value=user.status,inline=True)
-#            embed.add_field(name="Roles" , value =str( user.roles) , inline =True)
             embed.add_field(name="Highest role", value=user.top_role)
             embed.add_field(name="Joined Server", value=user.joined_at)
             embed.add_field(name="Joined Discord" , value=user.created_at)
@@ -77,24 +76,6 @@ class General:
         embed.set_thumbnail(url=ctx.message.server.icon_url)
         await self.bot.say(embed=embed)   
           
-
-
-
-#    @commands.command(pass_context =True)
-#    async def perms(self, ctx , user : discord.Member =None):
-#        """Shows u perms"""
-#        user = user or ctx.message.author
-#        try:
-#            embed = discord.Embed(title = "{}'s permissions".format(user.name), description="Here's what i could find in my bag..." , color=0x00ffff)
-#            embed.add_field(name="Permissions" , value = list(user.server_permissions) , inline = True)
-#            await bot.say(embed=embed)
-#        except Exception as error:
-#            await bot.say(error)
-
-       
-
-
-
 
 
 ###### SETUP
