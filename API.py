@@ -109,18 +109,6 @@ class API:
 
 
 
-
-#    @commands.command(pass_context=True) 
-#    async def google(self,ctx,*,query):
-#        """Google something"""     
-#        for i in googlesearch.search(query, tld='com', lang='en',     num=1, start=1, stop=2, pause=0.0):
-#            await self.bot.say(i)
-#        embed = discord.Embed(description = "Here's what I could find..." ,url = i , color= 0x00ffff)            
-#        await self.bot.say(embed=embed)
-
-
-
-
     @commands.command(pass_context=True, aliases= ['ud'])
     async def urban(self,ctx,*,word):
         """Search something in urbandictionary"""
