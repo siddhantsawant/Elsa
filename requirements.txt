@@ -1,0 +1,6 @@
+discord.py[voice]
+google
+urbandictionary
+chucknorris
+xkcd
+youtube_dl
