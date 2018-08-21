@@ -45,7 +45,7 @@ class Moderation:
 
 
     @commands.command(pass_context = True, aliases = ['grole', 'gr'])
-    async def getrole(self , ctx, *, colour=None):
+    async def getrole(self , ctx, *, role=None):
         """Get a custom role for IU server"""
         role_list = ['Grey', 'Red', 'Green']
         memb = ctx.message.author 
