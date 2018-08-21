@@ -49,7 +49,7 @@ class Moderation:
         """Get a custom role for IU server"""
         role_list = ['Grey', 'Red', 'Green']
         memb = ctx.message.author 
-        if ctx.message.server.id != '396519929974751233':
+        if ctx.message.server.id != '281793428793196544':
             return
         try:
             if role in role_list:
