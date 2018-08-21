@@ -40,7 +40,25 @@ class Moderation:
             await self.bot.add_reaction(ctx.message , '✅')
         except Exception as error:
             await self.bot.say(f'Unable to add role : {error}')
+            
         
+
+
+    @commands.command(pass_context = True, aliases = ['grole', 'gr'])
+    async def getrole(self , ctx, *, colour=None):
+        """Get a custom role for IU server"""
+        role_list = ['Grey', 'Red', 'Green']
+        memb = ctx.message.author 
+        if ctx.message.server.id != '396519929974751233':
+            return
+        try:
+            if role in role_list:
+                await self.bot.add_roles(memb, discord.utils.get(ctx.message.server.roles, name = role))
+                await self.bot.add_reaction(ctx.message,'✅' )
+            else:
+                await self.bot.say("Please enter the role available for grabbing!!!")
+        except Exception as error:
+                await self.bot.say(f'Unable to give role : {error}')
 
 
 
