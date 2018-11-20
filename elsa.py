@@ -88,7 +88,7 @@ async def on_member_remove(member):
 @bot.event
 async def on_message(message) :
     if ctx.message.channel.id == '459725199252783115':
-        role_list['Snow White', 'Invisible', 'Dark Night','Vampire Red','Dark Tulip', 'Cotton Candy','Dark Orchid', 'Dark Fantasy', 'New Rose', 'Dodger Blue', 'Grey Goose', 'Frosted Lemon', 'Wild Flower', 'Vivid Orange', 'Dark Chocolate', 'Mystic Orange', 'Atomic Pink', 'Mystic Leaf', 'Mermaid', 'Dark Sea', 'Lime Light', 'Pokemon', 'Anime', 'Sensei', 'Kawaii', 'Senpai', 'Kouhai', 'Baka', 'Chan', 'Kun']
+        role_list = ['Snow White', 'Invisible', 'Dark Night','Vampire Red','Dark Tulip', 'Cotton Candy','Dark Orchid', 'Dark Fantasy', 'New Rose', 'Dodger Blue', 'Grey Goose', 'Frosted Lemon', 'Wild Flower', 'Vivid Orange', 'Dark Chocolate', 'Mystic Orange', 'Atomic Pink', 'Mystic Leaf', 'Mermaid', 'Dark Sea', 'Lime Light', 'Pokemon', 'Anime', 'Sensei', 'Kawaii', 'Senpai', 'Kouhai', 'Baka', 'Chan', 'Kun']
         memb = ctx.message.author
         n = len(message)
     
