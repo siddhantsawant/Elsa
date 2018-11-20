@@ -87,37 +87,37 @@ async def on_member_remove(member):
 #Roles for Spark Server
 @bot.event
 async def on_message(message) :
-    role_list['Snow White', 'Invisible', 'Dark Night','Vampire Red','Dark Tulip', 'Cotton Candy','Dark Orchid', 'Dark Fantasy', 'New Rose', 'Dodger Blue', 'Grey Goose', 'Frosted Lemon', 'Wild Flower', 'Vivid Orange', 'Dark Chocolate', 'Mystic Orange', 'Atomic Pink', 'Mystic Leaf', 'Mermaid', 'Dark Sea', 'Lime Light', 'Pokemon', 'Anime', 'Sensei', 'Kawaii', 'Senpai', 'Kouhai', 'Baka', 'Chan', 'Kun']
-    memb = ctx.message.author
-    n = len(message)
-    if ctx.message.channel.id != '459725199252783115':
-        return
-    if message.startswith('iam') :
-        role = message[4:n]
-        if role in role_list:
-            try:
-                await self.bot.add_roles(memb, discord.utils.get(ctx.message.server.roles, name = role))
-            except Exception as error:
-                await self.bot.say(f'Unable to give role : {error}')
-            finally:
-                await asyncio.sleep(2)
-                await bot.delete_message(message)
+    if ctx.message.channel.id == '459725199252783115':
+        role_list['Snow White', 'Invisible', 'Dark Night','Vampire Red','Dark Tulip', 'Cotton Candy','Dark Orchid', 'Dark Fantasy', 'New Rose', 'Dodger Blue', 'Grey Goose', 'Frosted Lemon', 'Wild Flower', 'Vivid Orange', 'Dark Chocolate', 'Mystic Orange', 'Atomic Pink', 'Mystic Leaf', 'Mermaid', 'Dark Sea', 'Lime Light', 'Pokemon', 'Anime', 'Sensei', 'Kawaii', 'Senpai', 'Kouhai', 'Baka', 'Chan', 'Kun']
+        memb = ctx.message.author
+        n = len(message)
+    
+        if message.startswith('iam') :
+            role = message[4:n]
+            if role in role_list:
+                try:
+                    await self.bot.add_roles(memb, discord.utils.get(ctx.message.server.roles, name = role))
+                except Exception as error:
+                    await self.bot.say(f'Unable to give role : {error}')
+                finally:
+                    await asyncio.sleep(2)
+                    await bot.delete_message(message)
     
 
-    elif message.startswith('iwas') :
-        role = message[5:n]
-        if role in role_list:
-            try:
-                await self.bot.remove_roles( member , discord.utils.get(ctx.message.server.roles , name = role))
-            except Exception as error:
-                await self.bot.say(f'Unable to remove role : {error}')
-            finally :
-                await asyncio.sleep(2)
-                await bot.delete_message(message)
+        elif message.startswith('iwas') :
+            role = message[5:n]
+            if role in role_list:
+                try:
+                     await self.bot.remove_roles( member , discord.utils.get(ctx.message.server.roles , name = role))
+                except Exception as error:
+                    await self.bot.say(f'Unable to remove role : {error}')
+                finally :
+                    await asyncio.sleep(2)
+                    await bot.delete_message(message)
 
-    else:
-        await asyncio.sleep(1)
-        await bot.delete_message(message)
+        else:
+            await asyncio.sleep(1)
+            await bot.delete_message(message)
 
     
 
