@@ -96,9 +96,9 @@ async def on_message(message) :
             role = message[4:n]
             if role in role_list:
                 try:
-                    await self.bot.add_roles(memb, discord.utils.get(ctx.message.server.roles, name = role))
+                    await bot.add_roles(memb, discord.utils.get(ctx.message.server.roles, name = role))
                 except Exception as error:
-                    await self.bot.say(f'Unable to give role : {error}')
+                    await bot.say(f'Unable to give role : {error}')
                 finally:
                     await asyncio.sleep(2)
                     await bot.delete_message(message)
@@ -108,9 +108,9 @@ async def on_message(message) :
             role = message[5:n]
             if role in role_list:
                 try:
-                     await self.bot.remove_roles( member , discord.utils.get(ctx.message.server.roles , name = role))
+                     await bot.remove_roles( member , discord.utils.get(ctx.message.server.roles , name = role))
                 except Exception as error:
-                    await self.bot.say(f'Unable to remove role : {error}')
+                    await bot.say(f'Unable to remove role : {error}')
                 finally :
                     await asyncio.sleep(2)
                     await bot.delete_message(message)
