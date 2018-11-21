@@ -108,7 +108,7 @@ async def on_message(message) :
             role = message[5:n]
             if role in role_list:
                 try:
-                     await bot.remove_roles( member , discord.utils.get(ctx.message.server.roles , name = role))
+                     await bot.remove_roles( memb , discord.utils.get(ctx.message.server.roles , name = role))
                 except Exception as error:
                     await bot.send_message(f'Unable to remove role : {error}')
                 finally :
