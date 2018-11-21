@@ -98,7 +98,7 @@ async def on_message(message) :
                 try:
                     await bot.add_roles(memb, discord.utils.get(ctx.message.server.roles, name = role))
                 except Exception as error:
-                    await bot.say(f'Unable to give role : {error}')
+                    await bot.send_message(f'Unable to give role : {error}')
                 finally:
                     await asyncio.sleep(2)
                     await bot.delete_message(message)
@@ -110,7 +110,7 @@ async def on_message(message) :
                 try:
                      await bot.remove_roles( member , discord.utils.get(ctx.message.server.roles , name = role))
                 except Exception as error:
-                    await bot.say(f'Unable to remove role : {error}')
+                    await bot.send_message(f'Unable to remove role : {error}')
                 finally :
                     await asyncio.sleep(2)
                     await bot.delete_message(message)
@@ -118,6 +118,11 @@ async def on_message(message) :
         else:
             await asyncio.sleep(1)
             await bot.delete_message(message)
+
+    await bot.process_commands(message)
+
+
+
 
     
 
