@@ -85,13 +85,18 @@ async def on_member_remove(member):
 
 
 
-
+import asyncio
 @bot.event
 async def on_message(ctx):
     if ctx.channel.id == '459725199252783115':
         await asyncio.sleep(5)
         await bot.delete_message(ctx)
     await bot.process_commands(ctx)
+
+
+
+
+
 
 
 @bot.event
