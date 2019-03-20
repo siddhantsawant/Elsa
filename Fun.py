@@ -143,16 +143,16 @@ class Fun:
 
 
 
-    @commands.command(pass_context=True)
-    async def say (self , ctx , * , something=None):
-        """Make Elsa say something"""    
-        if something is None:
-            await self.bot.say("Nothing but cookies here 🍪 🍪 !!!")
-        elif '@everyone' in  ctx.message.content.lower():
-            await self.bot.say('Ssh.. What are you trying to do')
-        else:
-            await self.bot.delete_message(ctx.message)
-            await self.bot.say(something)
+#    @commands.command(pass_context=True)
+#    async def say (self , ctx , * , something=None):
+#        """Make Elsa say something"""    
+#        if something is None:
+#            await self.bot.say("Nothing but cookies here 🍪 🍪 !!!")
+#        elif '@everyone' in  ctx.message.content.lower():
+#            await self.bot.say('Ssh.. What are you trying to do')
+#        else:
+#            await self.bot.delete_message(ctx.message)
+#            await self.bot.say(something)
         
 
       
